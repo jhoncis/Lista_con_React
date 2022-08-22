@@ -38,8 +38,11 @@ const ToDo = () => {
               placeholder="Tarea por hacer"
             />
 
-            <label htmlFor="floatingInput">Tarea por hacer</label>
+            <label htmlFor="floatingInput">Tarea por hacer
+            </label>
             <div className="task"></div>
+            {taskList.length == 0 && <h1> No hay tareas, añadir tareas.</h1>}
+
             {taskList.map((tarea, i) => {
               return (
               <span className="d-flex justify-content-between py-2 bg-light" key={`s-${i}`}
